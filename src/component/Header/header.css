@@ -1,0 +1,14 @@
+#header {
+  backdrop-filter: blur(5px) !important;
+}
+
+.connect_btn {
+  width: 200px !important;
+  height: 45px !important;
+}
+@media (max-width:500px) {
+  .connect_btn {
+    width: 100% !important;
+    height: 45px !important;
+  }
+}
