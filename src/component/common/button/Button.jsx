@@ -5,7 +5,7 @@ import buttonHoverShapeWhite from "../../../assets/images/icon/hov_shape_s.svg";
 
 const Button = ({ children, ...props }) => {
   return (
-    <ButtonWrapper type="submit" className="bithu-btn" {...props}>
+    <ButtonWrapper type="submit" className="bithu-btn" {...props} >
       {children}
 
       <img
