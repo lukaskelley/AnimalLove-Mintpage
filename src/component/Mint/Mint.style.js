@@ -46,6 +46,8 @@ const MintStyleWrapper = styled.section`
 
   .mint_left_inner {
     max-width: 372px;
+    width: 100%;
+    margin-left: auto;
   }
 
   .mint_count_list {
@@ -60,7 +62,6 @@ const MintStyleWrapper = styled.section`
       border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 
       h5 {
-        font-family: "Inter";
         font-style: normal;
         font-weight: 600;
         font-size: 16px;
@@ -215,7 +216,6 @@ const MintStyleWrapper = styled.section`
 
     .count,
     .label {
-      font-family: "Bakbak One";
       font-style: normal;
       font-weight: 400;
       font-size: 40px;
@@ -269,7 +269,7 @@ const MintStyleWrapper = styled.section`
   }
 
   @media only screen and (max-width: 767px) {
-    padding: 70px 0 120px 0;
+    padding: 30px 0 120px 0;
     .mint_left_inner {
       margin: 0 auto;
     }
