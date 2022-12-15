@@ -12,7 +12,7 @@ export default function Header() {
   const { account, chainId, activate, deactivate } = useWeb3React();
 
   async function connect() {
-    if (chainId !== 19 || chainId === undefined) {
+    if (chainId !== 16 || chainId === undefined) {
       switchSongbirdNetwork();
     }
     try {

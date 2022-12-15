@@ -42,7 +42,7 @@ export default function SliderNFT() {
       <Slider {...sliderSettings}>
         {slideImages?.map((thumb, idx) => (
           <SliderItem key={idx}>
-            <div className="border-2 border-gray-600 p-3 ">
+            <div className="border-2 border-gray-600 p-3">
               <img src={thumb} alt="thumb" className="" />
             </div>
           </SliderItem>
