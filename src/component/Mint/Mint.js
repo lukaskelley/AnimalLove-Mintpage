@@ -37,14 +37,18 @@ const Mint = (account, connect, disconnect) => {
     console.log("=>", whiteListState);
     if (whiteListState) {
       await careTokenContrat
-        .approve(config.RoyalPetsContractAddr, config.BurnCareAmout, {
-          gasLimit: 3000000,
-        })
+        .approve(
+          config.RoyalPetsContractAddr,
+          ethers.utils.parseEther(config.BurnCareAmout.toString()),
+          {
+            gasLimit: 300000,
+          }
+        )
         .then((tx) => {
           tx.wait().then(() => {
             royalPetsContract
-              .mintWhiteList(config.mintCount, config.mintCost, {
-                gasLimit: 3000000,
+              .mintWhiteList(config.mintCount, {
+                gasLimit: config.totalGas,
                 value: ethers.utils.parseEther(config.mintCost.toString()),
               })
               .then((tx) => {
@@ -54,14 +58,18 @@ const Mint = (account, connect, disconnect) => {
         });
     } else {
       await careTokenContrat
-        .approve(config.RoyalPetsContractAddr, config.BurnCareAmout, {
-          gasLimit: 3000000,
-        })
+        .approve(
+          config.RoyalPetsContractAddr,
+          ethers.utils.parseEther(config.BurnCareAmout.toString()),
+          {
+            gasLimit: 300000,
+          }
+        )
         .then((tx) => {
           tx.wait().then(() => {
             royalPetsContract
-              .mint(config.mintCount, config.mintCost, {
-                gasLimit: 3000000,
+              .mint(config.mintCost, {
+                gasLimit: config.totalGas,
                 value: ethers.utils.parseEther(config.mintCost.toString()),
               })
               .then((tx) => {
